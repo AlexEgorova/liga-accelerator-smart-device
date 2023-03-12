@@ -30,15 +30,15 @@ html {
 body {
   width: 100%;
   height: 100%;
-  font-family: $ff-roboto;
+  font-family: $ff-mono;
   color: $color-default-black;
 
   background-color: $color-default-white;
 }
 
 a {
-  color: $color-default-black;
   text-decoration: none;
+  color: $color-default-black;
 }
 
 img,

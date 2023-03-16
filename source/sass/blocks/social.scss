@@ -1,25 +1,3 @@
-.social {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
-  // padding-top: 5px;
-  // padding-left: 30px;
-  // margin-right: 160px;
-
-  @include vp-1023 {
-    // width: 100%;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // margin: 0 auto;
-    // padding: 0;
-    // align-items: center;
-  }
-
-  @include vp-767 {
-    // flex-direction: column;
-  }
-}
-
 .social__wrapper {
   display: flex;
   flex-direction: column;
@@ -89,4 +67,3 @@
     margin-right: 0;
   }
 }
-

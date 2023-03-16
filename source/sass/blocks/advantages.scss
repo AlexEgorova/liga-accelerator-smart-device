@@ -1,0 +1,131 @@
+.advantages__wrapper {
+  max-width: 1222px;
+  margin: 0 auto;
+  margin-top: 121px;
+  margin-bottom: 100px;
+
+  @include vp-1023 {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.advantages {
+  & h3 {
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    color: $color-deep-sky-blue;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  & p {
+    display: block;
+    max-width: 420px;
+    font-family: $ff-mono;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    color: $color-black-pearl;
+    margin: 0;
+  }
+
+  & svg {
+    fill: $color-deep-sky-blue;
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__item {
+  max-width: 595px;
+  min-height: 300px;
+  padding: 40px 45px;
+  border: 1px solid $color-whisper;
+  border-left: 5px solid $color-deep-sky-blue;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-deep-sky-blue;
+
+    svg {
+      fill: $color-alice-blue;
+    }
+
+    & h3,
+    & p {
+      color: $color-alice-blue;
+    }
+  }
+
+  &--current {
+    background-color: $color-deep-sky-blue;
+
+    svg {
+      fill: $color-alice-blue;
+    }
+
+    & h3,
+    & p {
+      color: $color-alice-blue;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-default-white;
+
+      svg {
+        fill: $color-deep-sky-blue;
+      }
+
+      & h3 {
+        color: $color-deep-sky-blue;
+      }
+
+      & p {
+        color: $color-black-pearl;
+      }
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-child(3) {
+    margin-right: 30px;
+
+    @include vp-767 {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+  @include vp-1023 {
+    max-width: 321px;
+    min-height: 360px;
+  }
+
+  @include vp-767 {
+    max-width: 370px;
+    min-height: 340px;
+  }
+}

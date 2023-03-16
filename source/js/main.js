@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initAccordion} from './modules/accordion';
 
 // ---------------------------------
 
@@ -10,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initAccordion();
 
   // Modules
   // ---------------------------------
@@ -48,37 +50,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
-const itemsAccordion = document.querySelectorAll('.accordion__item');
-
-const removeState = () => {
-  itemsAccordion.forEach((item) => {
-    const toggle = item.querySelector('.accordion__toggle');
-
-    item.removeAttribute('data-state');
-    toggle.removeAttribute('data-nojs');
-  });
-};
-
-removeState();
-
-const initAccordion = () => {
-  itemsAccordion.forEach((item) => {
-    item.addEventListener('click', () => {
-      if (item.hasAttribute('data-state')) {
-        removeState();
-      } else {
-        removeState();
-        item.setAttribute('data-state', 'is-open');
-      }
-    });
-  });
-};
-
-initAccordion();
-
-
-window.addEventListener('resize', () => {
-  removeState();
-  initAccordion();
-});

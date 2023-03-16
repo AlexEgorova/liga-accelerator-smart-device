@@ -29,60 +29,26 @@
     display: none;
   }
 
-  &__wrapper {
-    position: relative;
-
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    cursor: pointer;
-  }
-
-  &__content {
-    position: relative;
-
-    width: 600px;
-    padding: 40px;
-
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
-
-    width: 40px;
-    height: 40px;
+  & h2 {
+    margin: 0;
+    margin-bottom: 3px;
     padding: 0;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140.62%;
+    color: $color-default-white;
+  }
 
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
+  & p {
+    margin: 0;
+    margin-bottom: 38px;
+    padding: 0;
+    font-family: $ff-mono;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
   }
 
   &--responsive {
@@ -116,4 +82,186 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 146px;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+
+  width: 500px;
+  min-height: 610px;
+  padding: 33px 40px;
+
+  background-color: $background-deep-sky-blue;
+  border-radius: 3px;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    fill: $color-default-white;
+
+    &:hover {
+      fill: $color-white-07;
+    }
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+
+.modal__form input[type="text"],
+.modal__form input[type="tel"],
+.modal__form textarea {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  border: none;
+  border-radius: 3px;
+  font-family: $ff-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  background-image: $background-deep-sky-blue;
+  background-color: rgba(4, 20, 39, 0.15);
+  padding: 15px;
+  margin-bottom: 18px;
+
+  &::placeholder {
+    font-family: $ff-mono;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    cursor: none;
+    background-color: transparent;
+    opacity: 0.7;
+  }
+}
+
+.modal__form textarea {
+  min-height: 155px;
+  padding-top: 25px;
+  margin-bottom: 25px;
+}
+
+.modal__form button {
+  display: block;
+  min-width: 265px;
+  min-height: 45px;
+  margin-bottom: 25px;
+  padding: 0;
+  background: $color-black-pearl;
+  border: none;
+  border-radius: 3px;
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.modal__agreement {
+  position: relative;
+}
+
+.modal__agreement span {
+  position: relative;
+  display: block;
+  min-width: 250px;
+  margin-top: -7px;
+  padding-right: 10px;
+  padding-left: 35px;
+  font-family: $ff-mono;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 7px;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+  }
+}
+
+.modal__agreement input[type="checkbox"]:checked + span::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  top: 5px;
+  left: 11px;
+  background-image: url("../../img/svg/icon-checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initAccordion();
+  initModals();
 
   // Modules
   // ---------------------------------
@@ -50,3 +51,60 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+// Modal open
+
+const headerButton = document.querySelector('.header__button');
+const modalFeedback = document.querySelector('.modal');
+
+
+headerButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  modalFeedback.classList.add('is-active');
+});
+
+// Modal close
+
+const modalCloseButton = modalFeedback.querySelector('.modal__close-btn');
+
+modalCloseButton.addEventListener('click', () => {
+  modalFeedback.classList.remove('is-active');
+});
+
+// Intro-button
+
+const introButton = document.querySelector('.intro__button');
+const inputFormFeedback = document.querySelector('.form input');
+
+introButton.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const elementId = introButton.getAttribute('href');
+
+  document.querySelector('' + elementId).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+  setTimeout(function () {
+    inputFormFeedback.focus();
+  }, 500);
+});
+
+// Company-button
+
+const companyWrapper = document.querySelector('.company__wrapper');
+const companyButton = companyWrapper.querySelector('.company__button');
+
+companyButton.removeAttribute('data-nojs');
+
+companyWrapper.setAttribute('data-company', 'is-close');
+
+companyButton.addEventListener('click', () => {
+  if (companyWrapper.hasAttribute('data-company')) {
+    companyWrapper.removeAttribute('data-company');
+    companyButton.textContent = 'Свернуть';
+  } else {
+    companyWrapper.setAttribute('data-company', 'is-close');
+    companyButton.textContent = 'Подробнее';
+  }
+});

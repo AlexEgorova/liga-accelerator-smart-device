@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion';
+import {initPhoneMask} from './modules/phone-mask/phone-mask';
 
 // ---------------------------------
 
@@ -12,10 +13,106 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initAccordion();
-  initModals();
 
   // Modules
   // ---------------------------------
+
+  // Modal open
+
+  const headerButton = document.querySelector('.header__button');
+  const modalFeedback = document.querySelector('.modal');
+  const userNameModal = modalFeedback.querySelector('form input[type=text]');
+
+
+  headerButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    modalFeedback.classList.add('is-active');
+    userNameModal.focus({focusVisible: true});
+    userNameModal.select();
+  });
+
+  // Modal close
+
+  const modalCloseButton = modalFeedback.querySelector('.modal__close-btn');
+
+  modalCloseButton.addEventListener('click', () => {
+    modalFeedback.classList.remove('is-active');
+  });
+
+  // Submit
+
+  const formFeedback = document.querySelector('.feedback__form');
+  const userNameFeedback = formFeedback.querySelector('form input[type=text]');
+  const userPhoneFeedback = formFeedback.querySelector('form input[type=tel]');
+  const userPhoneModal = modalFeedback.querySelector('form input[type=tel]');
+  const userQuestionFeedback = formFeedback.querySelector('form textarea');
+  const userQuestionModal = modalFeedback.querySelector('form textarea');
+
+  const setStorage = (element, name, tel, question) => {
+    const userName = element.querySelector(name);
+    const userPhone = element.querySelector(tel);
+    const userQuestion = element.querySelector(question);
+
+    localStorage.setItem('userName', userName.value);
+    localStorage.setItem('userPhone', userPhone.value);
+    localStorage.setItem('userQuestion', userQuestion.value);
+
+    userName.value = '';
+    userPhone.value = '';
+    userQuestion.value = '';
+  };
+
+  formFeedback.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    setStorage(formFeedback, userNameFeedback, userPhoneFeedback, userQuestionFeedback);
+  });
+
+  modalFeedback.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    setStorage(formFeedback, userNameModal, userPhoneModal, userQuestionModal);
+  });
+
+
+  // Intro-button
+
+  const introButton = document.querySelector('.intro__button');
+  // const inputFormFeedback = document.querySelector('form input[type=text]');
+
+  introButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const elementId = introButton.getAttribute('href');
+
+    document.querySelector('' + elementId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+    setTimeout(function () {
+      userNameFeedback.focus({focusVisible: true});
+    }, 700);
+  });
+
+  // Company-button
+
+  const companyWrapper = document.querySelector('.company__wrapper');
+  const companyButton = companyWrapper.querySelector('.company__button');
+
+  companyButton.removeAttribute('data-nojs');
+
+  companyWrapper.setAttribute('data-company', 'is-close');
+
+  companyButton.addEventListener('click', () => {
+    if (companyWrapper.hasAttribute('data-company')) {
+      companyWrapper.removeAttribute('data-company');
+      companyButton.textContent = 'Свернуть';
+    } else {
+      companyWrapper.setAttribute('data-company', 'is-close');
+      companyButton.textContent = 'Подробнее';
+    }
+  });
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -24,6 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initPhoneMask();
   });
 });
 
@@ -51,60 +149,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
-// Modal open
-
-const headerButton = document.querySelector('.header__button');
-const modalFeedback = document.querySelector('.modal');
-
-
-headerButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  modalFeedback.classList.add('is-active');
-});
-
-// Modal close
-
-const modalCloseButton = modalFeedback.querySelector('.modal__close-btn');
-
-modalCloseButton.addEventListener('click', () => {
-  modalFeedback.classList.remove('is-active');
-});
-
-// Intro-button
-
-const introButton = document.querySelector('.intro__button');
-const inputFormFeedback = document.querySelector('.form input');
-
-introButton.addEventListener('click', (event) => {
-  event.preventDefault();
-
-  const elementId = introButton.getAttribute('href');
-
-  document.querySelector('' + elementId).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
-  setTimeout(function () {
-    inputFormFeedback.focus();
-  }, 500);
-});
-
-// Company-button
-
-const companyWrapper = document.querySelector('.company__wrapper');
-const companyButton = companyWrapper.querySelector('.company__button');
-
-companyButton.removeAttribute('data-nojs');
-
-companyWrapper.setAttribute('data-company', 'is-close');
-
-companyButton.addEventListener('click', () => {
-  if (companyWrapper.hasAttribute('data-company')) {
-    companyWrapper.removeAttribute('data-company');
-    companyButton.textContent = 'Свернуть';
-  } else {
-    companyWrapper.setAttribute('data-company', 'is-close');
-    companyButton.textContent = 'Подробнее';
-  }
-});

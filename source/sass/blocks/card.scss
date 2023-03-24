@@ -1,6 +1,10 @@
 .card {
   position: relative;
-  min-height: 650px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 
   @include vp-1023 {
     min-height: 250px;
@@ -14,6 +18,30 @@
 .card a {
   display: block;
   text-decoration: none;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-deep-sky-blue;
+    background-image: url("../../img/svg/icon-more.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5px 10px;
+    border: none;
+    padding: 0;
+    border-radius: 3px 0 0 0;
+    cursor: pointer;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
 
   @include vp-1023 {
     min-height: 100%;
@@ -42,32 +70,6 @@
   @include vp-767 {
     top: 27px;
     left: 30px;
-  }
-}
-
-.card span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 60px;
-  height: 60px;
-  background: $color-deep-sky-blue;
-  border: none;
-  padding: 0;
-  border-radius: 3px 0 0 0;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
-
-  @include vp-767 {
-    width: 40px;
-    height: 40px;
   }
 }
 

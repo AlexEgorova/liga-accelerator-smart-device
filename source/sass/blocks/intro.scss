@@ -100,7 +100,7 @@
   }
 }
 
-.intro__button {
+.intro a {
   display: block;
   min-width: 410px;
   min-height: 55px;
@@ -127,7 +127,7 @@
   }
 }
 
-.intro__button-text {
+.intro span {
   font-family: $ff-roboto;
   font-weight: 700;
   font-size: 18px;
@@ -136,13 +136,13 @@
   text-transform: uppercase;
   color: $color-alice-blue;
 
-  &--full {
+  &:first-child {
     @include vp-767 {
       display: none;
     }
   }
 
-  &--short {
+  &:last-child {
     display: none;
 
     @include vp-767 {

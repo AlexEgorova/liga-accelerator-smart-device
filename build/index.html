@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="body-wrapper wrapper">
       <header class="header" data-fix-block>
         <div class="header__container container">
-          <a class="header__logo logo" href="#" aria-label="Smart Device">
-            <svg class="logo__svg" width="215" height="55" aria-hidden="true" focusable="false">
-              <use class="logo__icon logo__icon--full" xlink:href="./img/sprite.svg#logo-sd-full"></use>
-              <use class="logo__icon logo__icon--picture" xlink:href="./img/sprite.svg#logo-sd"></use>
-            </svg>
+          <a class="header__logo" href="#" aria-label="Smart Device">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./img/svg/logo-sd.svg">
+              <img src="./img/svg/logo-sd-full.svg" width="215" height="55" alt="Логотип компании Smart Device">
+            </picture>
           </a>
           <div class="header__contacts contact">
             <a class="contact__item contact__item--email" href="mailto:@info@sd.ru" aria-label="Написать нам на электронную почту">
@@ -38,9 +38,7 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </div>
-          <button class="header__button" type="button">
-            <span>Заказать звонок</span>
-          </button>
+          <button class="header__button" type="button">Заказать звонок</button>
         </div>
       </header>
       <main class="main-page">
@@ -49,33 +47,19 @@
             <div class="intro__container">
               <h1>Печатные платы</h1>
               <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-              <a class="intro__button" href="#feedbackForm">
-                <span class="intro__button-text intro__button-text--full">Получить бесплатную консультацию</span>
-                <span class="intro__button-text intro__button-text--short">Бесплатная консультация</span>
+              <a href="#feedbackForm" aria-label="Перейти к форме обратной связи">
+                <span>Получить бесплатную консультацию</span>
+                <span>Бесплатная консультация</span>
               </a>
             </div>
             <div class="intro__background">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/intro/intro-mob.webp, img/intro/intro-mob@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/intro/intro-tabl.webp, img/intro/intro-tabl@2x.webp 2x">
-                <source type="image/webp" srcset="img/intro/intro-desk.webp, img/intro/intro-desk@2x.webp 2x">
-                <img
-                  srcset="
-                    img/intro/intro-mob.jpg 320w,
-                    img/intro/intro-mob@2.jpg 640w,
-                    img/intro/intro-tabl.jpg 770w,
-                    img/intro/intro-tabl@2.jpg 1540w,
-                    img/intro/intro-desk.jpg 1920w,
-                    img/intro/intro-desk@2.jpg 3820w
-                  " sizes="
-                    (min-width:1024px) 1920px,
-                    ((min-width:1024px) and (min-resolution: 2dppx)) 3820px,
-                    (min-width:768px) 770px,
-                    ((min-width:768px) and (min-resolution: 2dppx)) 1540px,
-                    (max-width:767px) 320px,
-                    ((max-width:767px) and (min-resolution: 2dppx)) 640px
-                    "
-                  src="/img/intro/intro-desk.jpg" width="1920" height="880" alt="Печатная плата">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/intro/intro-mob.webp 1x, img/intro/intro-mob@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/intro/intro-tabl.webp 1x, img/intro/intro-tabl@2x.webp 2x">
+                <source type="image/webp" srcset="img/intro/intro-desk.webp 1x, img/intro/intro-desk@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/intro/intro-mob.jpg 1x, img/intro/intro-mob@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/intro/intro-tabl.jpg 1x, img/intro/intro-tabl@2x.jpg 2x">
+                <img src="./img/intro/intro-desk.jpg" srcset="img/intro/intro-desk@2.jpg 2x" width="1920" height="880" alt="Печатная плата">
                 </picture>
             </div>
           </section>
@@ -83,7 +67,7 @@
             <h2 class="visually-hidden">Преимущества нашей компании</h2>
             <div class="advantages__wrapper">
               <ul>
-                <li class="advantages__item advantages__item--current">
+                <li class="advantages__item">
                   <svg width="35" height="35" aria-hidden="true" focusable="false">
                     <use xlink:href="./img/sprite.svg#icon-stopwatch"></use>
                   </svg>
@@ -120,15 +104,15 @@
               <div class="company__content">
                 <h2>О компании</h2>
                 <div class="company__description">
-                  <p class="company__text company__text--about-us">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-                  <p class="company__text company__text--suppliers">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.</p>
-                  <p class="company__text company__text--clients">Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+                  <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+                  <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.</p>
+                  <p>Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
                   <div class="company__addition">
-                    <p class="company__text">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
-                    <p class="company__text">Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
+                    <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
+                    <p>Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
                   </div>
                 </div>
-                <button class="company__button" type="button" data-nojs="no-js">Подробнее</button>
+                <button class="company__button" type="button">Подробнее</button>
               </div>
             </div>
           </section>
@@ -142,99 +126,39 @@
                 <li class="catalog__item card">
                   <a href="#" aria-label="Перейти на страницу товара">
                     <h3>Производство печатных плат</h3>
-                    <span>
-                      <svg width="5" height="10" aria-hidden="true" focusable="false">
-                        <use xlink:href="./img/sprite.svg#icon-more"></use>
-                      </svg>
-                      <span class="visually-hidden">Больше информации...</span>
-                    </span>
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/production-mob.webp, img/catalog/production-mob@2x.webp 2x">
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/production-tabl.webp, img/catalog/production-tabl@2x.webp 2x">
                       <source type="image/webp" srcset="img/catalog/production-desk.webp, img/catalog/production-desk@2x.webp 2x">
-                      <img
-                        srcset="
-                          img/catalog/production-mob.jpg 270w,
-                          img/catalog/production-mob@2.jpg 540w,
-                          img/catalog/production-tabl.jpg 670w,
-                          img/catalog/production-tabl@2.jpg 1340w,
-                          img/catalog/production-desk.jpg 350w,
-                          img/catalog/production-desk@2.jpg 700w
-                        " sizes="
-                          (min-width:1024px) 350px,
-                          ((min-width:1024px) and (min-resolution: 2dppx)) 700px,
-                          (min-width:768px) 670px,
-                          ((min-width:768px) and (min-resolution: 2dppx)) 1340px,
-                          (max-width:767px) 270px,
-                          ((max-width:767px) and (min-resolution: 2dppx)) 540px
-                        "
-                        src="./img/catalog/production-desk.jpg" width="350" height="650" loading="lazy" alt="Производство печатных плат">
+                      <source media="(max-width: 767px)" srcset="img/catalog/production-mob.jpg, img/catalog/production-mob@2x.jpg 2x">
+                      <source media="(max-width: 1023px)" srcset="img/catalog/production-tabl.jpg, img/catalog/production-tabl@2x.jpg 2x">
+                      <img src="./img/catalog/production-desk.jpg" srcset="img/catalog/production-desk@2.jpg 2x" width="350" height="650" loading="lazy" alt="Производство печатных плат">
                     </picture>
                   </a>
                 </li>
                 <li class="catalog__item card">
                   <a href="#" aria-label="Перейти на страницу товара/услуги">
                     <h3>Монтаж печатных плат</h3>
-                    <span>
-                      <svg width="5" height="10" aria-hidden="true" focusable="false">
-                        <use xlink:href="./img/sprite.svg#icon-more"></use>
-                      </svg>
-                      <span class="visually-hidden">Больше информации...</span>
-                    </span>
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/installation-mob.webp, img/catalog/installation-mob@2x.webp 2x">
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/installation-tabl.webp, img/catalog/installation-tabl@2x.webp 2x">
                       <source type="image/webp" srcset="img/catalog/installation-desk.webp, img/catalog/installation-desk@2x.webp 2x">
-                      <img
-                        srcset="
-                          img/catalog/installation-mob.jpg 270w,
-                          img/catalog/installation-mob@2.jpg 540w,
-                          img/catalog/installation-tabl.jpg 670w,
-                          img/catalog/installation-tabl@2.jpg 1340w,
-                          img/catalog/installation-desk.jpg 350w,
-                          img/catalog/installation-desk@2.jpg 700w
-                        " sizes="
-                          (min-width:1024px) 350px,
-                          ((min-width:1024px) and (min-resolution: 2dppx)) 700px,
-                          (min-width:768px) 670px,
-                          ((min-width:768px) and (min-resolution: 2dppx)) 1340px,
-                          (max-width:767px) 270px,
-                          ((max-width:767px) and (min-resolution: 2dppx)) 540px
-                        "
-                        src="./img/catalog/installation-desk.jpg" width="350" height="650" loading="lazy" alt="Монтаж печатных плат">
+                      <source media="(max-width: 767px)" srcset="img/catalog/installation-mob.jpg, img/catalog/installation-mob@2x.jpg 2x">
+                      <source media="(max-width: 1023px)" srcset="img/catalog/installation-tabl.jpg, img/catalog/installation-tabl@2x.jpg 2x">
+                      <img src="./img/catalog/installation-desk.jpg" srcset="img/catalog/installation-desk@2.jpg 2x" width="350" height="650" loading="lazy" alt="Монтаж печатных плат">
                     </picture>
                   </a>
                 </li>
                 <li class="catalog__item card">
                   <a href="#" aria-label="Перейти на страницу товара/услуги">
                     <h3>Комплектующие для светотехники</h3>
-                    <span>
-                      <svg width="5" height="10" aria-hidden="true" focusable="false">
-                        <use xlink:href="./img/sprite.svg#icon-more"></use>
-                      </svg>
-                      <span class="visually-hidden">Больше информации...</span>
-                    </span>
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/accessories-mob.webp, img/catalog/accessories-mob@2x.webp 2x">
                       <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/accessories-tabl.webp, img/catalog/accessories-tabl@2x.webp 2x">
                       <source type="image/webp" srcset="img/catalog/accessories-desk.webp, img/catalog/accessories-desk@2x.webp 2x">
-                      <img
-                        srcset="
-                          img/catalog/accessories-mob.jpg 270w,
-                          img/catalog/accessories-mob@2.jpg 540w,
-                          img/catalog/accessories-tabl.jpg 670w,
-                          img/catalog/accessories-tabl@2.jpg 1340w,
-                          img/catalog/accessories-desk.jpg 350w,
-                          img/catalog/accessories-desk@2.jpg 700w
-                      " sizes="
-                          (min-width:1024px) 350px,
-                          ((min-width:1024px) and (min-resolution: 2dppx)) 700px,
-                          (min-width:768px) 670px,
-                          ((min-width:768px) and (min-resolution: 2dppx)) 1340px,
-                          (max-width:767px) 270px,
-                          ((max-width:767px) and (min-resolution: 2dppx)) 540px
-                        "
-                        src="./img/catalog/accessories-desk.jpg" width="350" height="650" loading="lazy" alt="Комплектующие для светотехники">
+                      <source media="(max-width: 767px)" srcset="img/catalog/accessories-mob.jpg, img/catalog/accessories-mob@2x.jpg 2x">
+                      <source media="(max-width: 1023px)" srcset="img/catalog/accessories-tabl.jpg, img/catalog/accessories-tabl@2x.jpg 2x">
+                      <img src="./img/catalog/accessories-desk.jpg" srcset="img/catalog/accessories-desk@2.jpg 2x" width="350" height="650" loading="lazy" alt="Комплектующие для светотехники">
                     </picture>
                   </a>
                 </li>
@@ -244,30 +168,30 @@
           <section class="main-page__feedback feedback" id="feedbackForm">
             <div class="feedback__wrapper">
               <picture>
-                <img
-                  srcset="img/form/paper-airplane@2x.png 1020w"
-                  sizes="(min-width:1024px) 510px, ((min-width:1024px) and (min-resolution: 2dppx)) 1020px"
-                  src="./img/form/paper-airplane.png" width="511" height="288" alt="Бумажный самолётик">
+                <source type="image/webp" srcset="img/form/paper-airplane.webp 1x, img/form/paper-airplane@2x.webp 2x">
+                <img src="./img/form/paper-airplane.png" srcset="img/form/paper-airplane@2x.png 2x" width="511" height="288" alt="Бумажный самолётик">
               </picture>
               <div class="feedback__content">
                 <h2>Остались вопросы? Задайте их нам!</h2>
                 <p>Мы проконсультируем Вас бесплатно</p>
-                <form class="feedback__form" name="feedbackform" action="https://echo.htmlacademy.ru/" method="post">
-                  <label for="name" data-on-input-validate>
-                    <input id="name" name="name" type="text" placeholder="Имя" tabindex="1" autofocus required>
-                  </label>
-                  <label for="tel">
-                    <input id="tel" name="tel" type="tel" placeholder="Телефон" tabindex="2" required>
-                  </label>
-                  <textarea id="question" name="question" placeholder="Ваш вопрос" tabindex="3"></textarea>
-                  <button type="submit" tabindex="4">Задать вопрос</button>
-                  <div  class="feedback__agreement">
-                    <label for="agreement">
-                      <input id="agreement" class="visually-hidden" name="agreement" type="checkbox" tabindex="5" checked required>
-                      <span>Я согласен на обработку персональных данных</span>
+                <div class="feedback__form form">
+                  <form name="feedbackform" action="https://echo.htmlacademy.ru/" method="post">
+                    <label for="name">
+                      <input data-on-input-validate id="name" name="name" type="text" placeholder="Имя" autofocus required>
                     </label>
-                  </div>
-                </form>
+                    <label for="tel">
+                      <input id="tel" name="tel" type="tel" placeholder="Телефон" required>
+                    </label>
+                    <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
+                    <button type="submit">Задать вопрос</button>
+                    <div  class="form__agreement">
+                      <label for="agreement">
+                        <input id="agreement" class="visually-hidden" name="agreement" type="checkbox" checked required>
+                        <span>Я согласен на обработку персональных данных</span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </section>
@@ -352,16 +276,16 @@
             <div class="office__wrapper accordion__body no-js">
               <ul>
                 <li>
-                  <a class="accordion__item" href="#">г. Мытищи, Олимпийский проспект,<br>д.10</a>
+                  <a class="accordion__item" href="#" aria-label="Адрес нашего офиса">г. Мытищи, Олимпийский проспект,<br>д.10</a>
                 </li>
                 <li>
-                  <a class="accordion__item" href="#">+7 (495) 589-40-50</a>
+                  <a class="accordion__item" href="tel: +74955894050" aria-label="Позвонить">+7 (495) 589-40-50</a>
                 </li>
                 <li>
-                  <a class="accordion__item" href="#">+7 (925) 389-58-29</a>
+                  <a class="accordion__item" href="tel: +79253895829" aria-label="Позвонить">+7 (925) 389-58-29</a>
                 </li>
                 <li>
-                  <a class="accordion__item" href="#">+7 (925) 364-78-13</a>
+                  <a class="accordion__item" href="tel: +79253647813" aria-label="Позвонить">+7 (925) 364-78-13</a>
                 </li>
               </ul>
             </div>
@@ -377,23 +301,25 @@
         <div class="modal__content">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <form class="modal__form" name="modalform" action="https://echo.htmlacademy.ru/" method="get">
-            <label for="modal-name">
-              <input id="modal-name" name="name" type="text" placeholder="Имя" tabindex="1" data-focus required>
-            </label>
-            <label for="modal-tel">
-              <input id="modal-tel" name="tel" type="tel" placeholder="Телефон" minlength="18" maxlength="18" pattern="\+7[\s(]*\d{3}[)\s]*\d{3}[\s-]?d{2}[\s-]?\d{2}" data-pattern="+7(___)___-__-__" data-prexix="+7(" tabindex="2" required>
-            </label>
-            <textarea id="modal-question" name="question" placeholder="Ваш вопрос" tabindex="3"></textarea>
-            <button type="submit" tabindex="4">Отправить</button>
-            <div  class="modal__agreement">
-              <label for="modal-agreement">
-                <input id="modal-agreement" class="visually-hidden" name="agreement" type="checkbox" tabindex="5" checked required>
-                <span>Я согласен на обработку персональных данных</span>
+          <div class="modal__form form">
+            <form name="modalform" action="https://echo.htmlacademy.ru/" method="get">
+              <label for="modal-name">
+                <input id="modal-name" name="name" type="text" placeholder="Имя" data-focus required>
               </label>
-            </div>
-          </form>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть форму заказа обратного звонка" tabindex="6" data-close-modal>
+              <label for="modal-tel">
+                <input id="modal-tel" name="tel" type="tel" placeholder="Телефон" minlength="18" maxlength="18" pattern="\+7[\s(]*\d{3}[)\s]*\d{3}[\s-]?d{2}[\s-]?\d{2}" data-pattern="+7(___)___-__-__" data-prexix="+7(" required>
+              </label>
+              <textarea id="modal-question" name="question" placeholder="Ваш вопрос"></textarea>
+              <button type="submit">Отправить</button>
+              <div class="modal__agreement">
+                <label for="modal-agreement">
+                  <input id="modal-agreement" class="visually-hidden" name="agreement" type="checkbox" checked required>
+                  <span>Я согласен на обработку персональных данных</span>
+                </label>
+              </div>
+            </form>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть форму заказа обратного звонка" data-close-modal>
             <svg width="20" height="20" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>

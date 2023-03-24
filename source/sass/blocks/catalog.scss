@@ -67,35 +67,27 @@
 }
 
 .catalog__list {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: 650px;
+  column-gap: 65px;
   list-style: none;
   padding: 0;
 
   @include vp-1023 {
+    display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     margin: 0;
   }
 }
 
 .catalog__item {
-  margin-right: 85px;
-
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-
   @include vp-1023 {
-    margin-right: 0;
     margin-bottom: 30px;
 
     &:nth-child(3n) {
       margin-bottom: 0;
     }
-  }
-
-  @include vp-767 {
-    margin-bottom: 30px;
   }
 }

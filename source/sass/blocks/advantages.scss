@@ -1,34 +1,47 @@
 .advantages__wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  margin-top: 121px;
-  margin-bottom: 120px;
 
   @include vp-1023 {
-    margin-top: 80px;
-    margin-bottom: 75px;
+    // margin-top: 80px;
+    // margin-bottom: 75px;
   }
 
   @include vp-767 {
-    max-width: 320px;
-    margin-top: 50px;
+    // max-width: 320px;
+    // margin-top: 50px;
     margin-bottom: 50px;
   }
 }
 
 .advantages ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 595px);
+  grid-template-rows: repeat(2, 300px);
   list-style: none;
-  margin: 0 auto;
+  margin-top: 121px;
+  margin-bottom: 120px;
   padding: 0;
-  padding-left: 55px;
   gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 320px);
+    grid-template-rows: repeat(2, 360px);
+    margin-top: 80px;
+    margin-bottom: 75px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .advantages {
-  & h3 {
+  h3 {
     font-family: $ff-roboto;
     font-weight: 400;
     font-size: 24px;
@@ -46,7 +59,7 @@
     }
   }
 
-  & p {
+  p {
     display: block;
     max-width: 420px;
     font-family: $ff-mono;
@@ -61,7 +74,7 @@
     }
   }
 
-  & svg {
+  svg {
     fill: $color-deep-sky-blue;
     margin-bottom: 20px;
 
@@ -93,8 +106,8 @@
       fill: $color-alice-blue;
     }
 
-    & h3,
-    & p {
+    h3,
+    p {
       color: $color-alice-blue;
     }
   }
@@ -106,8 +119,8 @@
       fill: $color-alice-blue;
     }
 
-    & h3,
-    & p {
+    h3,
+    p {
       color: $color-alice-blue;
     }
 
@@ -119,11 +132,11 @@
         fill: $color-deep-sky-blue;
       }
 
-      & h3 {
+      h3 {
         color: $color-deep-sky-blue;
       }
 
-      & p {
+      p {
         color: $color-black-pearl;
       }
     }
@@ -138,10 +151,5 @@
     max-width: 270px;
     min-height: 325px;
     padding: 30px;
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      min-height: 340px;
-    }
   }
 }

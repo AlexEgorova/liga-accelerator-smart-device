@@ -46,30 +46,14 @@
 
 .footer section {
   @include vp-767 {
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $color-white-07;
-    }
+    border-top: 1px solid $color-white-07;
 
     &:first-child {
-      &::after {
-        display: none;
-      }
+      border-top: none;
     }
 
     &:last-child {
-      &::before {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        width: 100vw;
-        height: 1px;
-        background-color: $color-white-07;
-      }
+      border-bottom: 1px solid $color-white-07;
     }
   }
 }

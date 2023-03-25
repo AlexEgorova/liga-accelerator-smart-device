@@ -1375,13 +1375,10 @@ button,
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 120px;
   z-index: 10;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  padding-top: 30px;
-  padding-bottom: 35px;
 }
 
 .header__container {
@@ -1396,8 +1393,13 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 60px;
-  width: 1280px;
+  max-width: 1920px;
+  min-width: 1440px;
+  min-height: 120px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-right: 410px;
+  padding-left: 350px;
 }
 
 .header__logo img:hover,
@@ -1409,7 +1411,7 @@ button,
   display: block;
   min-width: 160px;
   height: 40px;
-  padding: 10px 15px;
+  padding: 7px 15px 15px;
   border: 1px solid #f2f5f7;
   border-radius: 3px;
   background-color: transparent;
@@ -1450,6 +1452,11 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding-bottom: 7px;
+  min-width: 210px;
+}
+
+.contact__item--phone span {
+  letter-spacing: 2px;
 }
 
 .contact svg {
@@ -1467,26 +1474,17 @@ button,
   min-height: 280px;
   background-color: #041827;
   color: rgba(255, 255, 255, 0.7);
-  padding-top: 45px;
+  padding-top: 43px;
   margin: 0 auto;
 }
 
 .footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 500px 1fr;
+  grid-template-columns: 1fr 500px 1fr;
   max-width: 1280px;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  padding: 0 60px;
+  padding: 0;
   position: relative;
 }
 
@@ -1667,7 +1665,7 @@ button,
   min-height: 320px;
   max-width: 967px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 30px;
   z-index: 5;
   left: -30px;
 }
@@ -1748,6 +1746,9 @@ button,
 .advantages ul {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-grid-columns: (595px)[2];
   grid-template-columns: repeat(2, 595px);
   -ms-grid-rows: (300px)[2];
@@ -1756,6 +1757,7 @@ button,
   margin-top: 121px;
   margin-bottom: 120px;
   padding: 0;
+  padding-left: 30px;
   gap: 30px;
 }
 
@@ -1771,7 +1773,7 @@ button,
 
 .advantages p {
   display: block;
-  max-width: 420px;
+  max-width: 480px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1782,13 +1784,13 @@ button,
 
 .advantages svg {
   fill: #00b2ff;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 .advantages__item {
-  max-width: 595px;
+  max-width: 594px;
   min-height: 300px;
-  padding: 40px 45px;
+  padding: 40px 42px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
   cursor: pointer;
@@ -1854,7 +1856,6 @@ button,
   max-width: 1222px;
   margin: 0 auto;
   margin-bottom: 100px;
-  padding-left: 30px;
 }
 
 .company img {
@@ -1875,11 +1876,11 @@ button,
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .company__description {
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 }
 
 .company__description p {
@@ -1888,10 +1889,11 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  letter-spacing: 0.03em;
 }
 
 .company__description p:first-child {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .company__wrapper[data-company=is-close] .company__addition {
@@ -1947,7 +1949,7 @@ button,
   max-width: 1280px;
   margin: 0 auto;
   padding-top: 35px;
-  padding-left: 58px;
+  padding-left: 30px;
   padding-bottom: 125px;
 }
 
@@ -1974,9 +1976,9 @@ button,
   grid-template-columns: repeat(3, 350px);
   -ms-grid-rows: 650px;
   grid-template-rows: 650px;
-  -webkit-column-gap: 65px;
-  -moz-column-gap: 65px;
-  column-gap: 65px;
+  -webkit-column-gap: 85px;
+  -moz-column-gap: 85px;
+  column-gap: 85px;
   list-style: none;
   padding: 0;
 }
@@ -2063,14 +2065,15 @@ button,
   padding-top: 165px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 590px;
-  grid-template-columns: 1fr 590px;
-  gap: 120px;
+  -ms-grid-columns: 1fr 620px;
+  grid-template-columns: 1fr 620px;
+  gap: 80px;
 }
 
 .feedback img {
   padding-top: 80px;
   margin-left: auto;
+  margin-right: 40px;
   z-index: 120;
 }
 
@@ -2211,7 +2214,7 @@ button,
 
 .form button {
   display: block;
-  min-width: 265px;
+  max-width: 265px;
   min-height: 45px;
   padding: 0;
   background: #041827;
@@ -2330,9 +2333,23 @@ button,
   }
 */
 
+@media (max-width: 1919px) {
+  .header__container {
+    min-width: 1440px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
 @media (max-width: 1439px) {
   .container {
     padding: 0 32px;
+  }
+
+  .header__container {
+    min-width: 1024px;
+    padding-right: 50px;
+    padding-left: 60px;
   }
 }
 
@@ -2341,15 +2358,10 @@ button,
     padding: 0 24px;
   }
 
-  .header {
-    min-height: 100px;
-    padding-top: 20px;
-    padding-bottom: 25px;
-  }
-
   .header__container {
-    padding: 0 50px;
-    width: 770px;
+    padding: 20px 50px 25px 50px;
+    min-width: 770px;
+    min-height: 100px;
   }
 
   .header__button {
@@ -2366,8 +2378,8 @@ button,
   }
 
   .contact__item {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
   }
 
   .contact__item--email {
@@ -2485,6 +2497,7 @@ button,
   .intro__container {
     left: 0;
     min-height: 300px;
+    padding: 0 50px;
   }
 
   .intro h1 {
@@ -2508,6 +2521,7 @@ button,
     grid-template-rows: repeat(2, 360px);
     margin-top: 80px;
     margin-bottom: 75px;
+    padding-left: 50px;
   }
 
   .advantages h3 {
@@ -2561,6 +2575,7 @@ button,
 
   .catalog__title {
     margin-bottom: 36px;
+    letter-spacing: -0.01em;
   }
 
   .catalog__list {
@@ -2664,15 +2679,10 @@ button,
     padding: 20px;
   }
 
-  .header {
-    min-height: 70px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
-
   .header__container {
-    padding: 0 25px;
-    width: 320px;
+    min-width: 320px;
+    min-height: 70px;
+    padding: 12px 26px 20px;
   }
 
   .header__logo img {
@@ -2861,18 +2871,13 @@ button,
   }
 
   .advantages ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    -ms-grid-rows: 340px 340px 325px 325px;
+    grid-template-rows: 340px 340px 325px 325px;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-left: 25px;
   }
 
   .advantages h3 {
@@ -2886,13 +2891,12 @@ button,
   .advantages svg {
     width: 30px;
     height: 30px;
-    margin-bottom: 10px;
   }
 
   .advantages__item {
     max-width: 270px;
-    min-height: 325px;
-    padding: 30px;
+    min-height: 100%;
+    padding: 30px 26px;
   }
 
   .company__wrapper {

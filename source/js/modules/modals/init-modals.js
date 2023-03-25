@@ -24,6 +24,11 @@ const settings = {
     openCallback: false,
     closeCallback: false,
   },
+  'feedback-modal': {
+    openCallback: () => console.log('Я отработаю при открытии modal'),
+    closeCallback: () => console.log('Я отработаю при закрытии modal'),
+  },
+
 };
 
 const initModals = () => {
@@ -34,8 +39,19 @@ const initModals = () => {
     }, 100);
   });
   modals = new Modals(settings);
+
+  const openModalButton = document.querySelector('.header__button');
+
+  if (openModalButton !== null) {
+    openModalButton.addEventListener('click', () => {
+      modals.open('feedback-modal');
+    });
+  } else {
+    document.querySelector('.header__logo').focus();
+  }
+
   // Используйте в разработке экспортируемую переменную modals, window сделан для бэкэнда
-  window.modals = modals;
+  // window.modals = modals;
 };
 
 export {modals, initModals};

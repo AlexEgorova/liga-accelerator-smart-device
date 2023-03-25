@@ -26,8 +26,8 @@
   margin: 0 auto;
   padding-top: 165px;
   display: grid;
-  grid-template-columns: 1fr 590px;
-  gap: 120px;
+  grid-template-columns: 1fr 620px;
+  gap: 80px;
 
   @include vp-1023 {
     min-width: 770px;
@@ -50,6 +50,7 @@
 .feedback img {
   padding-top: 80px;
   margin-left: auto;
+  margin-right: 40px;
   z-index: 120;
 
   @include vp-1023 {

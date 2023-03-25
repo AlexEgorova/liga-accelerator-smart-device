@@ -3,7 +3,7 @@
   min-height: 280px;
   background-color: $color-black-pearl;
   color: $color-white-07;
-  padding-top: 45px;
+  padding-top: 43px;
   margin: 0 auto;
 
   @include vp-1023 {
@@ -16,12 +16,10 @@
 }
 
 .footer__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
   max-width: 1280px;
-  align-items: flex-start;
-  padding: 0 60px;
+  padding: 0;
   position: relative;
 
   @include vp-1023 {

@@ -17,7 +17,7 @@
   <body>
     <div class="body-wrapper wrapper">
       <header class="header" data-fix-block>
-        <div class="header__container container">
+        <div class="header__container">
           <a class="header__logo" href="#" aria-label="Smart Device">
             <picture>
               <source media="(max-width: 767px)" srcset="./img/svg/logo-sd.svg">
@@ -38,7 +38,7 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </div>
-          <button class="header__button" type="button">Заказать звонок</button>
+          <button class="header__button" type="button" data-open-modal="feedback-modal">Заказать звонок</button>
         </div>
       </header>
       <main class="main-page">
@@ -174,9 +174,9 @@
               <div class="feedback__content">
                 <h2>Остались вопросы? Задайте их нам!</h2>
                 <p>Мы проконсультируем Вас бесплатно</p>
-                <div class="feedback__form form">
+                <div class="feedback__form form" data-form-validate data-callback="base">
                   <form name="feedbackform" action="https://echo.htmlacademy.ru/" method="post">
-                    <label for="name">
+                    <label for="name" data-on-input-validate>
                       <input data-on-input-validate id="name" name="name" type="text" placeholder="Имя" autofocus required>
                     </label>
                     <label for="tel">
@@ -295,7 +295,7 @@
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="feedback-modal">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">

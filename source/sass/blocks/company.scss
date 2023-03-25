@@ -4,7 +4,6 @@
   max-width: 1222px;
   margin: 0 auto;
   margin-bottom: 100px;
-  padding-left: 30px;
 
   @include vp-1023 {
     max-width: 770px;
@@ -53,7 +52,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   @include vp-1023 {
     margin-bottom: 12px;
@@ -67,7 +66,7 @@
 }
 
 .company__description {
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 
   @include vp-1023 {
     margin-bottom: 14px;
@@ -84,9 +83,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  letter-spacing: 0.03em;
 
   &:first-child {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     @include vp-1023 {
       margin-bottom: 20px;

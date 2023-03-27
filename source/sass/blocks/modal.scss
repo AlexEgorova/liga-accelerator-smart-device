@@ -41,6 +41,7 @@
   }
 
   & p {
+    max-width: 380px;
     margin: 0;
     margin-bottom: 38px;
     padding: 0;
@@ -49,6 +50,7 @@
     font-size: 16px;
     line-height: 22px;
     color: $color-default-white;
+    letter-spacing: 0.04em;
   }
 
   &--responsive {
@@ -112,7 +114,7 @@
 
   width: 500px;
   min-height: 610px;
-  padding: 33px 40px;
+  padding: 37px 40px;
 
   background-color: $background-deep-sky-blue;
   border-radius: 3px;
@@ -125,7 +127,7 @@
 
 .modal__close-btn {
   position: absolute;
-  top: 15px;
+  top: 17px;
   right: 15px;
   z-index: 1;
 
@@ -160,7 +162,7 @@
   margin-bottom: 18px;
 }
 
-.modal textarea {
+.modal__form textarea {
   min-height: 155px;
   padding-top: 25px;
   margin-bottom: 25px;
@@ -168,21 +170,22 @@
 
 .modal__form button {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .modal__agreement {
-  position: relative;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-left: 8px;
 }
 
-.modal span {
-  &::before {
-    top: 0;
-    left: 7px;
+.modal__agreement input {
+  margin-right: 11px;
+}
+
+.modal__agreement .input-message {
+  &.is-invalid {
+    color: $color-default-black;
+    padding-left: 30px;
   }
-}
-
-.modal input[type="checkbox"]:checked + span::after {
-  top: 5px;
-  left: 11px;
 }

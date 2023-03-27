@@ -3,6 +3,7 @@
 
   @include vp-767 {
     cursor: pointer;
+    align-items: center;
   }
 }
 
@@ -13,6 +14,7 @@
     display: block;
     position: absolute;
     width: 100%;
+    max-width: 270px;
     height: 61px;
     padding: 0;
     top: 0;

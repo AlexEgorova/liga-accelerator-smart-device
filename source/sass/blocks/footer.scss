@@ -44,6 +44,7 @@
 
 .footer section {
   @include vp-767 {
+    width: 100%;
     border-top: 1px solid $color-white-07;
 
     &:first-child {

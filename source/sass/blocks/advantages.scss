@@ -10,7 +10,7 @@
 .advantages ul {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 595px);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, 300px);
   list-style: none;
   margin-top: 121px;
@@ -81,13 +81,12 @@
     @include vp-767 {
       width: 30px;
       height: 30px;
-      // margin-bottom: 8px;
     }
   }
 }
 
 .advantages__item {
-  max-width: 594px;
+  min-width: 594px;
   min-height: 300px;
   padding: 40px 42px;
   border: 1px solid $color-whisper;
@@ -139,12 +138,12 @@
   }
 
   @include vp-1023 {
-    max-width: 321px;
+    min-width: 321px;
     min-height: 360px;
   }
 
   @include vp-767 {
-    max-width: 270px;
+    min-width: 270px;
     min-height: 100%;
     padding: 30px 26px;
   }

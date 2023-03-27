@@ -117,3 +117,48 @@
     max-width: 270px;
   }
 }
+
+.feedback__form textarea {
+  grid-row: 2 / 3;
+  grid-column: span 2;
+  margin-bottom: 13px;
+}
+
+.feedback__form button {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  max-width: 265px;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.feedback__agreement {
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-left: 10px;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+
+  @include vp-1023 {
+    padding-top: 5px;
+    padding-left: 0;
+    padding-right: 15px;
+  }
+
+  @include vp-767 {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-bottom: 5px;
+  }
+}
+
+.feedback__agreement input {
+  margin-right: 12px;
+
+  @include vp-1023 {
+    margin-right: 10px;
+  }
+}

@@ -24,11 +24,6 @@ const settings = {
     openCallback: false,
     closeCallback: false,
   },
-  'feedback-modal': {
-    openCallback: () => console.log('Я отработаю при открытии modal'),
-    closeCallback: () => console.log('Я отработаю при закрытии modal'),
-  },
-
 };
 
 const initModals = () => {
@@ -43,7 +38,8 @@ const initModals = () => {
   const openModalButton = document.querySelector('.header__button');
 
   if (openModalButton !== null) {
-    openModalButton.addEventListener('click', () => {
+    openModalButton.addEventListener('click', (event) => {
+      event.preventDefault();
       modals.open('feedback-modal');
     });
   } else {

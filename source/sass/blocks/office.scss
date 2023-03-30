@@ -1,7 +1,6 @@
 .office {
   display: flex;
   flex-direction: column;
-  min-width: 345px;
 
   @include vp-1023 {
     padding-left: 25px;
@@ -13,8 +12,4 @@
     padding-left: 5px;
     margin-bottom: 20px;
   }
-}
-
-.office__wrapper {
-  max-width: 270px;
 }

@@ -45,7 +45,7 @@
   }
 }
 
-.header__logo img {
+.header__logo {
   &:hover,
   &:focus {
     opacity: 0.5;
@@ -66,7 +66,6 @@
   border-radius: 3px;
   background-color: transparent;
   cursor: pointer;
-
   text-align: center;
   font-family: $ff-roboto;
   font-weight: 700;
@@ -75,7 +74,6 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-alice-blue;
-
 
   @include vp-1023 {
     display: none;

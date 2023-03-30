@@ -9,11 +9,13 @@
     max-width: 770px;
     justify-content: center;
     margin-bottom: 80px;
+    padding-left: 20px;
   }
 
   @include vp-767 {
     max-width: 270px;
     margin-bottom: 77px;
+    padding-left: 0;
   }
 }
 

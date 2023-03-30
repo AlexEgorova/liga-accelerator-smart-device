@@ -3,7 +3,6 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion';
 import {initCompanyButton} from './modules/company-button';
-import {initIntroButton} from './modules/intro-button';
 
 // ---------------------------------
 
@@ -16,7 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  initIntroButton();
   initCompanyButton();
   initAccordion();
   initModals();

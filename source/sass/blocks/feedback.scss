@@ -118,10 +118,17 @@
   }
 }
 
-.feedback__form textarea {
+.feedback__question {
   grid-row: 2 / 3;
-  grid-column: span 2;
-  margin-bottom: 13px;
+  grid-column: 1 / 3;
+}
+
+.feedback__form textarea {
+  margin-bottom: 5px;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
 }
 
 .feedback__form button {
@@ -156,7 +163,8 @@
 }
 
 .feedback__agreement input {
-  margin-right: 12px;
+  margin-top: 8px;
+  margin-right: 10px;
 
   @include vp-1023 {
     margin-right: 10px;

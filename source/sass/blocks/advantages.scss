@@ -13,14 +13,16 @@
   margin-top: 121px;
   margin-bottom: 120px;
   padding: 0;
-  padding-left: 27px;
-  gap: 30px;
+  padding-left: 30px;
+  gap: 30px 5px;
 
   @include vp-1023 {
     grid-template-columns: repeat(2, 320px);
     margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 75px;
+    padding-left: 0;
+    column-gap: 30px;
   }
 
   @include vp-767 {
@@ -39,7 +41,7 @@
     line-height: 140%;
     color: $color-deep-sky-blue;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
     @include vp-1023 {
       margin-bottom: 10px;
@@ -52,13 +54,13 @@
 
   p {
     display: block;
+    margin: 0;
     max-width: 480px;
     font-family: $ff-mono;
     font-weight: 400;
     font-size: 16px;
     line-height: 135%;
     color: $color-black-pearl;
-    margin: 0;
 
     @include vp-767 {
       font-size: 14px;

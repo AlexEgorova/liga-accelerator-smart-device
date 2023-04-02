@@ -39,7 +39,7 @@
   padding-top: 25px;
 
   @include vp-1023 {
-    margin-bottom: 12px;
+    margin-bottom: 3px;
   }
 
   @include vp-767 {
@@ -99,5 +99,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+  }
+
+  @include vp-767 {
+    order: 4;
   }
 }

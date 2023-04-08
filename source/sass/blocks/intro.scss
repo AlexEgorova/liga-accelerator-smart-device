@@ -80,7 +80,7 @@
 }
 
 .intro p {
-  display: inline-block;
+  display: block;
   margin: 0;
   margin-bottom: 47px;
   max-width: 600px;
@@ -89,16 +89,20 @@
   font-size: 22px;
   line-height: 155%;
   color: $color-alice-blue;
+  text-align: justify;
+  word-spacing: 6px;
 
   @include vp-1023 {
+    max-width: 603px;
     margin-bottom: 57px;
-    letter-spacing: 0.03em;
   }
 
   @include vp-767 {
+    max-width: 259px;
     font-size: 13px;
-    text-align: justify;
-    margin-bottom: 48px;
+    margin-bottom: 46px;
+    letter-spacing: 0.04rem;
+    word-spacing: 4px;
   }
 }
 
@@ -111,6 +115,7 @@
   background: $color-deep-sky-blue;
   text-align: center;
   padding: 15px 0;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -125,7 +130,7 @@
     min-width: 270px;
     min-height: 40px;
     margin-left: 0;
-    padding: 10px 0;
+    padding: 12px 0;
   }
 }
 

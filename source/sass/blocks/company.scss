@@ -125,7 +125,7 @@
 .company__button {
   min-width: 180px;
   min-height: 45px;
-  padding: 0;
+  padding: 14px 12px;
   background-color: transparent;
   border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
@@ -139,13 +139,16 @@
   color: $color-deep-sky-blue;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  @include hover {
     background-color: $color-deep-sky-blue;
     color: $color-alice-blue;
   }
 
-  &:active {
+  @include focus {
+    border-color: $color-black-pearl;
+  }
+
+  @include active {
     opacity: 0.7;
   }
 

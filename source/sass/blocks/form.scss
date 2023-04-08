@@ -50,7 +50,7 @@
 
 .form button {
   display: block;
-  max-height: 45px;
+  min-height: 45px;
   padding: 13px;
   background: $color-black-pearl;
   border: none;
@@ -65,8 +65,7 @@
   color: $color-default-white;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.5;
   }
 }
@@ -92,6 +91,7 @@
     height: 15px;
     border: 1px solid $color-default-white;
     border-radius: 2px;
+    cursor: pointer;
   }
 
   & input[type="checkbox"]:checked {
@@ -99,6 +99,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+  }
+
+  & label {
+    cursor: pointer;
+  }
+
+  @include hover {
+    opacity: 0.3;
   }
 
   @include vp-767 {

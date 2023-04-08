@@ -164,6 +164,10 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .wrapper {
@@ -266,7 +270,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -432,6 +436,9 @@ button,
   justify-content: flex-start;
   padding-top: 10px;
   padding-left: 8px;
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
 }
 
 .modal__agreement input {
@@ -481,8 +488,7 @@ button,
   padding-left: 350px;
 }
 
-.header__logo:hover,
-.header__logo:focus {
+.header__logo:hover {
   opacity: 0.5;
 }
 
@@ -503,10 +509,18 @@ button,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #f2f5f7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.header__button:hover,
-.header__button:focus {
+.header__button:hover {
+  color: #00b2ff;
+  border-color: #00b2ff;
+}
+
+.header__button:active {
   opacity: 0.5;
 }
 
@@ -540,12 +554,21 @@ button,
 
 .contact svg {
   margin-right: 12px;
+  fill: #00b2ff;
 }
 
 .contact span {
   color: #f2f5f7;
   font-size: 16px;
   line-height: 18px;
+}
+
+.contact span:hover {
+  color: #00b2ff;
+}
+
+.contact span:active {
+  opacity: 0.7;
 }
 
 .footer {
@@ -588,6 +611,10 @@ button,
   margin-bottom: 22px;
 }
 
+.social__logo svg {
+  fill: #f2f5f7;
+}
+
 .social ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -611,6 +638,18 @@ button,
 
 .social li:last-child {
   margin-right: 0;
+}
+
+.social svg {
+  fill: #f8fdff;
+}
+
+.social svg:hover {
+  fill: #00b2ff;
+}
+
+.social svg:active {
+  opacity: 0.7;
 }
 
 .accordion {
@@ -637,7 +676,7 @@ button,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
-  cursor: pointer;
+  pointer-events: none;
   margin: 0;
   margin-top: 13px;
   margin-bottom: 20px;
@@ -665,15 +704,7 @@ button,
   font-size: 16px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
-}
-
-.accordion a:hover,
-.accordion a:focus {
-  color: #00b2ff;
-}
-
-.accordion a:active {
-  opacity: 0.7;
+  pointer-events: none;
 }
 
 .site-map {
@@ -762,7 +793,7 @@ button,
 }
 
 .intro p {
-  display: inline-block;
+  display: block;
   margin: 0;
   margin-bottom: 47px;
   max-width: 600px;
@@ -771,6 +802,8 @@ button,
   font-size: 22px;
   line-height: 155%;
   color: #f2f5f7;
+  text-align: justify;
+  word-spacing: 6px;
 }
 
 .intro a {
@@ -782,6 +815,10 @@ button,
   background: #00b2ff;
   text-align: center;
   padding: 15px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .intro a:hover,
@@ -876,7 +913,6 @@ button,
   padding: 40px 42px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
-  cursor: pointer;
 }
 
 .advantages__item:hover,
@@ -993,7 +1029,7 @@ button,
 .company__button {
   min-width: 180px;
   min-height: 45px;
-  padding: 0;
+  padding: 14px 12px;
   background-color: transparent;
   border: 1px solid #00b2ff;
   border-radius: 3px;
@@ -1008,13 +1044,11 @@ button,
   cursor: pointer;
 }
 
-.company__button:hover,
-.company__button:focus {
-  background-color: #00b2ff;
-  color: #f2f5f7;
+.company__button.focus-visible:focus {
+  border-color: #041827;
 }
 
-.company__button:active {
+.company__button.focus-visible:active {
   opacity: 0.7;
 }
 
@@ -1322,7 +1356,7 @@ button,
 
 .form button {
   display: block;
-  max-height: 45px;
+  min-height: 45px;
   padding: 13px;
   background: #041827;
   border: none;
@@ -1338,8 +1372,7 @@ button,
   cursor: pointer;
 }
 
-.form button:hover,
-.form button:focus {
+.form button:hover {
   opacity: 0.5;
 }
 
@@ -1372,6 +1405,7 @@ button,
   height: 15px;
   border: 1px solid #ffffff;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .form__group--agreement input[type=checkbox]:checked {
@@ -1379,6 +1413,10 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
+}
+
+.form__group--agreement label {
+  cursor: pointer;
 }
 
 /* @mixin hover-focus {
@@ -1447,6 +1485,10 @@ button,
     padding: 0 24px;
   }
 
+  .header {
+    position: absolute;
+  }
+
   .header__container {
     padding: 20px 50px 25px 50px;
     min-width: 770px;
@@ -1473,6 +1515,14 @@ button,
 
   .contact__item--email {
     margin-right: 20px;
+  }
+
+  .contact svg:hover {
+    fill: #f8fdff;
+  }
+
+  .contact svg:active {
+    opacity: 0.7;
   }
 
   .contact span {
@@ -1598,8 +1648,8 @@ button,
   }
 
   .intro p {
+    max-width: 603px;
     margin-bottom: 57px;
-    letter-spacing: 0.03em;
   }
 
   .intro a {
@@ -1883,6 +1933,7 @@ button,
   .accordion__body.no-js {
     max-height: 100%;
     overflow: hidden;
+    margin-bottom: 20px;
   }
 
   .accordion h2 {
@@ -1926,16 +1977,18 @@ button,
   }
 
   .intro p {
+    max-width: 259px;
     font-size: 13px;
-    text-align: justify;
-    margin-bottom: 48px;
+    margin-bottom: 46px;
+    letter-spacing: 0.04rem;
+    word-spacing: 4px;
   }
 
   .intro a {
     min-width: 270px;
     min-height: 40px;
     margin-left: 0;
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   .intro span:first-child {
@@ -1972,7 +2025,7 @@ button,
   .advantages__item {
     max-width: 270px;
     min-height: 340px;
-    padding: 30px 26px;
+    padding: 30px 30px 30px 26px;
   }
 
   .advantages__item:nth-child(n+3) {
@@ -2117,5 +2170,16 @@ button,
     -webkit-box-ordinal-group: 5;
     -ms-flex-order: 4;
     order: 4;
+  }
+}
+
+@media (hover: hover) {
+  .company__button:hover:not(.focus-visible) {
+    background-color: #00b2ff;
+    color: #f2f5f7;
+  }
+
+  .form__group--agreement:hover:not(.focus-visible) {
+    opacity: 0.3;
   }
 }

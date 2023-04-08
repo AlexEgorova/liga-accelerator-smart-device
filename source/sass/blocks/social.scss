@@ -31,6 +31,10 @@
   @include vp-1023 {
     margin: 0;
   }
+
+  svg {
+    fill: $color-alice-blue;
+  }
 }
 
 .social ul {
@@ -71,5 +75,17 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+.social svg {
+  fill: $color-alice-blue-icon;
+
+  &:hover {
+    fill: $color-deep-sky-blue;
+  }
+
+  &:active {
+    opacity: 0.7;
   }
 }

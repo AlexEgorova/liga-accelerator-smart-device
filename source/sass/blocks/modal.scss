@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $color-black-pearl-07;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -177,6 +177,7 @@
   justify-content: flex-start;
   padding-top: 10px;
   padding-left: 8px;
+  order: 4;
 }
 
 .modal__agreement input {

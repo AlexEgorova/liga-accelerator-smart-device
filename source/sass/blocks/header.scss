@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 10;
   background: $black-pearl-to-bottom;
+
+  @include vp-1023 {
+    position: absolute;
+  }
 }
 
 .header__container {
@@ -47,8 +51,7 @@
 }
 
 .header__logo {
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.5;
   }
 
@@ -75,13 +78,18 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-alice-blue;
+  user-select: none;
 
   @include vp-1023 {
     display: none;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
+    color: $color-deep-sky-blue;
+    border-color: $color-deep-sky-blue;
+  }
+
+  &:active {
     opacity: 0.5;
   }
 }

@@ -28,6 +28,7 @@
     content: "";
     width: 150px;
     height: 350px;
+    top: 5px;
     left: 0;
     background-image: url("../../img/company/about-company.png");
     background-repeat: no-repeat;
@@ -94,6 +95,8 @@
 
     @include vp-1023 {
       margin-bottom: 20px;
+      letter-spacing: 0.01em;
+      word-spacing: 4px;
     }
 
     @include vp-767 {

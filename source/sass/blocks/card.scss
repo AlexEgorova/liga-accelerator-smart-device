@@ -1,8 +1,8 @@
 .card {
   position: relative;
+  min-height: 100%;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.5;
   }
 
@@ -16,9 +16,15 @@
 }
 
 .card a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   position: relative;
+  min-height: 648px;
+  padding-top: 45px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+
 
   &::after {
     position: absolute;
@@ -45,13 +51,18 @@
 
   @include vp-1023 {
     min-height: 100%;
+    padding-top: 35px;
+    padding-left: 46px;
+  }
+
+  @include vp-767 {
+    padding-top: 25px;
+    padding-left: 30px;
   }
 }
 
 .card h3 {
-  position: absolute;
-  top: 50px;
-  left: 40px;
+  display: block;
   font-family: $ff-roboto;
   font-weight: 400;
   font-size: 20px;
@@ -60,22 +71,27 @@
   margin: 0;
   padding: 0;
   max-width: 170px;
+  min-height: 55px;
   z-index: 2;
 
   @include vp-1023 {
-    top: 40px;
-    left: 45px;
+    max-width: 150px;
   }
 
   @include vp-767 {
-    top: 27px;
-    left: 30px;
+    max-width: 135px;
+    font-size: 18px;
+    line-height: 167%;
   }
 }
 
 .card img {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }

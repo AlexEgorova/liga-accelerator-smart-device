@@ -8,7 +8,7 @@
     content: "";
     top: 0;
     left: 0;
-    width: 50%;
+    width: 50.55%;
     height: 100%;
     background: $color-black-pearl-05;
     clip-path: polygon(0 0, 0 100%, 100% 0);
@@ -26,8 +26,8 @@
   margin: 0 auto;
   padding-top: 165px;
   display: grid;
-  grid-template-columns: 1fr 620px;
-  gap: 80px;
+  grid-template-columns: 1fr 630px;
+  gap: 70px;
 
   @include vp-1023 {
     min-width: 770px;
@@ -50,7 +50,7 @@
 .feedback img {
   padding-top: 80px;
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 41px;
   z-index: 120;
 
   @include vp-1023 {
@@ -58,13 +58,18 @@
   }
 }
 
+.feedback__content {
+  padding-left: 5px;
+}
+
 .feedback h2 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: $ff-roboto;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+  letter-spacing: -0.01em;
   color: $color-default-white;
 
   @include vp-1023 {
@@ -83,9 +88,12 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  letter-spacing: 0.02em;
+  word-spacing: 2px;
   color: $color-default-white;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
+  margin-left: 5px;
   padding: 0;
 
   @include vp-1023 {
@@ -106,9 +114,11 @@
   grid-template-rows: auto;
   column-gap: 30px;
   row-gap: 20px;
+  margin-left: 5px;
 
   @include vp-1023 {
     grid-template-columns: repeat(2, 320px);
+    margin-left: 0;
   }
 
   @include vp-767 {
@@ -165,8 +175,14 @@
 .feedback__agreement input {
   margin-top: 8px;
   margin-right: 10px;
+  margin-left: 0;
 
   @include vp-1023 {
     margin-right: 10px;
   }
+}
+
+.feedback__agreement label {
+  letter-spacing: 0.02em;
+  word-spacing: 2px;
 }

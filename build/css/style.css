@@ -423,12 +423,12 @@ button,
 .modal__form textarea {
   min-height: 155px;
   padding-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 
 .modal__form button {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .modal__agreement {
@@ -443,12 +443,18 @@ button,
 }
 
 .modal__agreement input {
-  margin-right: 11px;
+  margin-left: 0;
+  margin-right: 15px;
 }
 
 .modal__agreement .input-message.is-invalid {
   color: #000000;
   padding-left: 30px;
+}
+
+.modal__agreement label {
+  letter-spacing: 0.01em;
+  word-spacing: 5px;
 }
 
 .body-wrapper {
@@ -867,6 +873,7 @@ button,
   justify-content: center;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 .advantages ul {
@@ -877,9 +884,8 @@ button,
   list-style: none;
   margin-top: 121px;
   margin-bottom: 120px;
-  padding: 0;
-  padding-left: 30px;
-  gap: 30px 5px;
+  padding-left: 0;
+  gap: 30px;
 }
 
 .advantages h3 {
@@ -909,7 +915,6 @@ button,
 }
 
 .advantages__item {
-  max-width: 595px;
   min-height: 300px;
   padding: 40px 42px;
   border: 1px solid #ebebeb;
@@ -983,7 +988,7 @@ button,
   content: "";
   width: 150px;
   height: 350px;
-  top: 5px;
+  top: 0;
   left: 0;
   background-image: url("../../img/company/about-company.png");
   background-repeat: no-repeat;
@@ -1086,7 +1091,9 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px 85px;
+  -webkit-column-gap: 85px;
+  -moz-column-gap: 85px;
+  column-gap: 85px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1378,7 +1385,7 @@ button,
 }
 
 .form input[aria-invalid=true] {
-  outline: 2px solid red;
+  outline: 2px solid #ff1553;
 }
 
 .form button {
@@ -1685,9 +1692,13 @@ button,
     margin-left: 43px;
   }
 
+  .advantages__wrapper {
+    padding: 0 45px;
+  }
+
   .advantages ul {
-    -ms-grid-columns: (320px)[2];
-    grid-template-columns: repeat(2, 320px);
+    -ms-grid-columns: (minmax(320px, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
     margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 75px;
@@ -1715,7 +1726,7 @@ button,
   }
 
   .company__wrapper {
-    max-width: 770px;
+    min-width: 770px;
     margin-bottom: 80px;
     padding: 0 30px;
   }
@@ -1741,8 +1752,8 @@ button,
   }
 
   .catalog__wrapper {
-    max-width: 670px;
-    padding: 38px 0 74px;
+    min-width: 768px;
+    padding: 38px 30px 74px;
   }
 
   .catalog__title span {
@@ -1804,8 +1815,8 @@ button,
   }
 
   .feedback__form form {
-    -ms-grid-columns: (320px)[2];
-    grid-template-columns: repeat(2, 320px);
+    -ms-grid-columns: (minmax(320px, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
     margin-left: 0;
   }
 
@@ -2044,6 +2055,10 @@ button,
     line-height: 16px;
   }
 
+  .advantages__wrapper {
+    padding: 0 25px;
+  }
+
   .advantages ul {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
@@ -2066,7 +2081,7 @@ button,
   }
 
   .advantages__item {
-    max-width: 270px;
+    min-width: 270px;
     min-height: 340px;
     padding: 30px 30px 30px 26px;
   }
@@ -2080,9 +2095,9 @@ button,
   }
 
   .company__wrapper {
-    max-width: 270px;
+    min-width: 320px;
     margin-bottom: 77px;
-    padding: 0;
+    padding: 0 25px;
   }
 
   .company__content::before {
@@ -2124,10 +2139,8 @@ button,
   }
 
   .catalog__wrapper {
-    max-width: 270px;
-    padding-top: 28px;
-    padding-left: 0;
-    padding-bottom: 87px;
+    min-width: 320px;
+    padding: 28px 25px 87px;
   }
 
   .catalog__title span:first-child {
@@ -2179,6 +2192,10 @@ button,
     gap: 0;
   }
 
+  .feedback__content {
+    width: 100%;
+  }
+
   .feedback h2 {
     font-size: 30px;
     line-height: 42px;
@@ -2200,7 +2217,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    max-width: 270px;
+    min-width: 270px;
   }
 
   .feedback__form button {

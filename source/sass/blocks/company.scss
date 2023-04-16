@@ -5,15 +5,15 @@
   margin-bottom: 120px;
 
   @include vp-1023 {
-    max-width: 770px;
+    min-width: 770px;
     margin-bottom: 80px;
     padding: 0 30px;
   }
 
   @include vp-767 {
-    max-width: 270px;
+    min-width: 320px;
     margin-bottom: 77px;
-    padding: 0;
+    padding: 0 25px;
   }
 }
 
@@ -28,7 +28,7 @@
     content: "";
     width: 150px;
     height: 350px;
-    top: 5px;
+    top: 0;
     left: 0;
     background-image: url("../../img/company/about-company.png");
     background-repeat: no-repeat;

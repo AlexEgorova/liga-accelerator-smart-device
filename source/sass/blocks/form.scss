@@ -49,7 +49,7 @@
 
 
 .form input[aria-invalid="true"] {
-  outline: 2px solid red;
+  outline: 2px solid $color-torch-red;
 }
 
 .form button {

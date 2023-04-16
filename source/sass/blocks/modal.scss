@@ -166,12 +166,12 @@
 .modal__form textarea {
   min-height: 155px;
   padding-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 
 .modal__form button {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .modal__agreement {
@@ -182,7 +182,8 @@
 }
 
 .modal__agreement input {
-  margin-right: 11px;
+  margin-left: 0;
+  margin-right: 15px;
 }
 
 .modal__agreement .input-message {
@@ -190,4 +191,9 @@
     color: $color-default-black;
     padding-left: 30px;
   }
+}
+
+.modal__agreement label {
+  letter-spacing: 0.01em;
+  word-spacing: 5px;
 }

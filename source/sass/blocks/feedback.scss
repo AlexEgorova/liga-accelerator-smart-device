@@ -60,6 +60,10 @@
 
 .feedback__content {
   padding-left: 5px;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .feedback h2 {
@@ -117,14 +121,14 @@
   margin-left: 5px;
 
   @include vp-1023 {
-    grid-template-columns: repeat(2, 320px);
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
     margin-left: 0;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    max-width: 270px;
+    min-width: 270px;
   }
 }
 

@@ -22,8 +22,6 @@
   margin-top: 121px;
   margin-bottom: 120px;
   padding-left: 0;
-  // padding-left: 30px;
-  // gap: 30px 5px;
   gap: 30px;
 
   @include vp-1023 {
@@ -93,8 +91,6 @@
 }
 
 .advantages__item {
-  // min-width: 100%;
-  // max-width: 595px;
   min-height: 300px;
   padding: 40px 42px;
   border: 1px solid $color-whisper;
@@ -153,7 +149,6 @@
   }
 
   @include vp-767 {
-    // max-width: 270px;
     min-width: 270px;
     min-height: 340px;
     padding: 30px 30px 30px 26px;

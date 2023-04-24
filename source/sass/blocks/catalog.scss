@@ -12,18 +12,13 @@
   padding: 45px 30px 140px;
 
   @include vp-1023 {
-    // max-width: 670px;
     min-width: 768px;
-    padding: 38px 30px 74px;
+    padding: 38px 50px 74px;
   }
 
   @include vp-767 {
     min-width: 320px;
-    // max-width: 270px;
     padding: 28px 25px 87px;
-    // padding-top: 28px;
-    // padding-left: 0;
-    // padding-bottom: 87px;
   }
 }
 

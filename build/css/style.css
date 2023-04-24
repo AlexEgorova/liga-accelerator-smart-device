@@ -581,6 +581,7 @@ button,
   background-color: #041827;
   color: rgba(255, 255, 255, 0.7);
   padding-top: 43px;
+  padding-bottom: 55px;
   margin: 0 auto;
 }
 
@@ -620,31 +621,22 @@ button,
 }
 
 .social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  margin-left: 10px;
-  padding: 0;
-  padding-bottom: 10px;
+  margin-left: 13px;
 }
 
 .social li {
   display: block;
   width: 40px;
   height: 40px;
-  text-align: center;
-  margin-right: 15px;
-}
-
-.social li:last-child {
-  margin-right: 0;
 }
 
 .social svg {
@@ -656,7 +648,7 @@ button,
 }
 
 .social svg:active {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .accordion {
@@ -677,9 +669,6 @@ button,
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
@@ -711,7 +700,15 @@ button,
   font-size: 16px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
-  pointer-events: none;
+  cursor: pointer;
+}
+
+.accordion a:hover {
+  color: #00b2ff;
+}
+
+.accordion a:active {
+  opacity: 0.5;
 }
 
 .site-map {
@@ -723,7 +720,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 auto;
-  padding-left: 10px;
+  padding-left: 60px;
 }
 
 .site-map nav {
@@ -743,6 +740,21 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding-left: 15px;
+}
+
+.office__wrapper {
+  padding-left: 0;
+}
+
+.office a {
+  letter-spacing: 0.02em;
+  word-spacing: 6px;
+  line-height: 156%;
+}
+
+.office a:first-child {
+  line-height: 135%;
 }
 
 .intro {
@@ -1312,7 +1324,7 @@ button,
   color: #ffffff;
   background-image: #00b3ff;
   background-color: rgba(4, 20, 39, 0.15);
-  padding: 15px;
+  padding: 13px;
 }
 
 .form input[type=text]::-webkit-input-placeholder,
@@ -1391,7 +1403,7 @@ button,
 .form button {
   display: block;
   min-height: 45px;
-  padding: 16px 10px 13px;
+  padding: 16px 10px 12px;
   background: #041827;
   border: none;
   border-radius: 3px;
@@ -1566,7 +1578,11 @@ button,
   }
 
   .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 50px;
+    padding-bottom: 65px;
   }
 
   .footer__container {
@@ -1622,7 +1638,7 @@ button,
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-left: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 0;
     max-width: 670px;
   }
@@ -1632,16 +1648,7 @@ button,
   }
 
   .social ul {
-    margin-left: 0;
     padding-top: 6px;
-  }
-
-  .social li {
-    margin-right: 12px;
-  }
-
-  .social li:last-child {
-    margin-right: 0;
   }
 
   .site-map {
@@ -1753,7 +1760,7 @@ button,
 
   .catalog__wrapper {
     min-width: 768px;
-    padding: 38px 30px 74px;
+    padding: 38px 50px 74px;
   }
 
   .catalog__title span {
@@ -1880,6 +1887,7 @@ button,
 
   .footer {
     padding-top: 0;
+    padding-bottom: 35px;
   }
 
   .footer__container {
@@ -1892,9 +1900,6 @@ button,
     flex-direction: column;
     padding: 0;
     max-width: 100%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 
   .footer section {
@@ -1920,31 +1925,24 @@ button,
     align-items: center;
     max-width: 320px;
     margin: 0 auto;
-    padding-top: 37px;
+    padding-top: 35px;
     padding-bottom: 25px;
   }
 
   .social ul {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    max-width: 160px;
-    margin: 0 auto;
-    padding-left: 10px;
+    margin: 0;
+    padding-left: 0;
   }
 
   .accordion {
     cursor: pointer;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 
   .accordion__toggle {
     display: block;
     position: absolute;
     width: 100%;
-    max-width: 270px;
+    min-width: 320px;
     height: 61px;
     padding: 0;
     top: 0;
@@ -1957,8 +1955,8 @@ button,
   .accordion__toggle::after {
     position: absolute;
     content: "";
-    top: 48%;
-    right: 0;
+    top: 44%;
+    right: 25px;
     width: 15px;
     height: 1px;
     background-color: #c4c4c4;
@@ -1992,7 +1990,13 @@ button,
 
   .accordion h2 {
     margin-top: 22px;
-    margin-right: 152px;
+    min-width: 270px;
+    margin-right: auto;
+    padding: 0 25px;
+  }
+
+  .accordion a {
+    font-size: 14px;
   }
 
   .site-map {
@@ -2002,14 +2006,29 @@ button,
   }
 
   .site-map nav {
-    max-width: 270px;
+    min-width: 270px;
+    padding: 0 25px;
+  }
+
+  .site-map ul:last-child {
+    margin-bottom: 13px;
   }
 
   .office {
     min-width: 270px;
     padding-top: 2px;
-    padding-left: 5px;
+    padding-left: 0;
     margin-bottom: 20px;
+  }
+
+  .office__wrapper {
+    min-width: 270px;
+    margin-right: 0;
+    padding: 0 25px;
+  }
+
+  .office__wrapper ul {
+    margin-bottom: 13px;
   }
 
   .intro {
@@ -2019,9 +2038,9 @@ button,
   }
 
   .intro__container {
-    max-width: 270px;
+    min-width: 320px;
     min-height: 270px;
-    padding: 0;
+    padding: 0 25px;
   }
 
   .intro h1 {
@@ -2116,7 +2135,7 @@ button,
   }
 
   .company__description {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .company__description p:first-child {
@@ -2135,7 +2154,8 @@ button,
 
   .company__button {
     min-width: 160px;
-    min-height: 40px;
+    min-height: 35px;
+    padding: 0;
   }
 
   .catalog__wrapper {
@@ -2194,6 +2214,7 @@ button,
 
   .feedback__content {
     width: 100%;
+    padding: 0;
   }
 
   .feedback h2 {
@@ -2203,6 +2224,7 @@ button,
   }
 
   .feedback p {
+    margin-left: 0;
     margin-bottom: 34px;
     font-size: 14px;
     line-height: 19px;

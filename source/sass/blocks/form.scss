@@ -12,7 +12,7 @@
   color: $color-default-white;
   background-image: $background-deep-sky-blue;
   background-color: rgba(4, 20, 39, 0.15);
-  padding: 15px;
+  padding: 13px;
 
   &::placeholder {
     font-family: $ff-mono;
@@ -55,7 +55,7 @@
 .form button {
   display: block;
   min-height: 45px;
-  padding: 16px 10px 13px;
+  padding: 16px 10px 12px;
   background: $color-black-pearl;
   border: none;
   border-radius: 3px;

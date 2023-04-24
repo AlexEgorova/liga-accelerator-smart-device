@@ -63,6 +63,7 @@
 
   @include vp-767 {
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -105,6 +106,7 @@
   }
 
   @include vp-767 {
+    margin-left: 0;
     margin-bottom: 34px;
     font-size: 14px;
     line-height: 19px;
